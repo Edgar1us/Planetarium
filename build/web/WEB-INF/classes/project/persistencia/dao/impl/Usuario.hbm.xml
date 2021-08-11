@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2021 17:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="astrodb" name="project.model.Usuario" optimistic-lock="version" table="usuario">
+    <id name="idUsuario" type="java.lang.Integer">
+      <column name="idUsuario"/>
+      <generator class="identity"/>
+    </id>
+    <property name="usuario" type="string">
+      <column name="usuario" not-null="true"/>
+    </property>
+    <property name="password" type="string">
+      <column name="password" not-null="true"/>
+    </property>
+    <property name="tipoUsuario" type="string">
+      <column length="12" name="tipoUsuario" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

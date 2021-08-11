@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2021 17:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class catalog="astrodb" name="project.model.Satelite" optimistic-lock="version" table="satelite">
+        <id name="idSatelite" type="java.lang.Integer">
+            <column name="idSatelite"/>
+            <generator class="identity"/>
+        </id>
+        <property name="periodo" type="string">
+            <column length="8" name="periodo" not-null="true"/>
+        </property>
+        <property name="peso" type="string">
+            <column length="8" name="peso" not-null="true"/>
+        </property>
+        <property name="medida" type="string">
+            <column length="8" name="medida" not-null="true"/>
+        </property>
+    
+        <many-to-one name="planeta">
+            <column name="idPlaneta"/>
+        </many-to-one>
+    
+    </class>
+</hibernate-mapping>
